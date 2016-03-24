@@ -6,15 +6,13 @@
 
 def computeMinimumPayment( balance ):
     #TODO write code inside this function that achieves the functionality described above
-    minimumPayment =  2.1 or 10
-    if minimumPayment > balance:
+    minimumPayment = 10 
+    if minimumPayment < balance * 0.021:
+        return balance * 0.021
+    elif balance < minimumPayment:
+        return balance
+    elif balance > minimumPayment and balance * 0.021 < minimumPayment:
         return minimumPayment
-    elif balance == 1000:
-        return 21
-    elif balance == 600:
-        return 12.6
-    elif balance == 25:
-        return 10
-    elif balance == 8:
-        return 8
+        
     
+        
